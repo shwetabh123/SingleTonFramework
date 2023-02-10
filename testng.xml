@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite  name="Suite" parallel="tests" thread-count="2">
+
+
+	<test   name="LoginTests1"  >
+		<classes>
+			<class name="Tests.ParallelTestingThreadLocal" />
+
+		</classes>
+
+	</test> 
+
+	<test name="LoginTests2"  >
+		<classes>
+
+			<class name="Tests.ParallelTestingThreadLocal2" />
+		</classes>
+
+	</test> 
+
+	<test name="LoginTests3"  >
+		<classes>
+
+			<class name="Tests.ParallelTestingThreadLocal3" />
+		</classes>
+
+	</test> 
+	
+	<test name="LoginTests4"  >
+		<classes>
+
+			<class name="Tests.ParallelTestingThreadLocal4" />
+		</classes>
+
+	</test> 
+
+</suite>

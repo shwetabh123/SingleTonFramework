@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Extent Parallel Test" parallel="tests" thread-count="4">
+
+   
+<!--    <listeners>
+   
+   <listener class-name="com.pulse.Test.MyTransformer"/>
+   
+   </listeners> -->
+ 
+  <!--   <test name="TestChrome">
+         <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="test.java.com.pulse.Test.ValidLogin1" />
+     
+          <class name="test.java.com.pulse.Test.ValidLogin2" />
+        </classes>
+    </test>
+     -->
+    
+    
+    
+     <test name="TestFirefox">
+         <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="test.java.com.pulse.Test.ValidLogin3" />
+     
+            <class name="test.java.com.pulse.Test.ValidLogin4" />
+     
+        </classes>
+    </test>
+    
+    
+    <!--   
+     <test name="ExtentWithParallelClasses3">
+         <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.pulse.Test.ValidLogin3" />
+     
+        
+        </classes>
+    </test>
+   
+   
+    <test name="ExtentWithParallelClasses4">
+         <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.pulse.Test.ValidLogin4" />
+     
+        
+        </classes>
+    </test> -->
+   
+   
+   
+</suite>

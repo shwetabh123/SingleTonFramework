@@ -13,6 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -38,11 +39,19 @@ public class ListenersImplementation implements ITestListener{
 		//before each test case
 		test = report.createTest(result.getMethod().getMethodName());
 		ExtentFactory.getInstance().setExtent(test);
+		
+		
+		Reporter.log("Method name is "+result.getName());
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		ExtentFactory.getInstance().getExtent().log(Status.PASS, "Test Case: "+result.getMethod().getMethodName()+ " is Passed.");
 		ExtentFactory.getInstance().removeExtentObject();
+		
+		
+		Reporter.log("Status of execution is "+result.getStatus());
+		
+		
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -89,6 +98,9 @@ public class ListenersImplementation implements ITestListener{
 	public void onTestSkipped(ITestResult result) {
 		ExtentFactory.getInstance().getExtent().log(Status.SKIP, "Test Case: "+result.getMethod().getMethodName()+ " is skipped.");
 		ExtentFactory.getInstance().removeExtentObject();
+		
+		Reporter.log("Status of execution is "+result.getStatus());
+		
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

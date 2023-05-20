@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="classes" name="LoginTests1(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="LoginTests1(failed)">
     <classes>
       <class name="Tests.ParallelTestingThreadLocal">
         <methods>
           <include name="beforeSuite"/>
-          <include name="FacebookTest"/>
+          <include name="opensearchresults" invocation-numbers="1"/>
           <include name="beforeTest"/>
-          <include name="FlipkartTest"/>
+          <include name="searchforkeywords"/>
           <include name="testDown"/>
           <include name="beforeClass"/>
-          <include name="MyntraTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="GoogleTest"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- Tests.ParallelTestingThreadLocal -->
-      <class name="Tests.ParallelTestingThreadLocal3">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="GoogleTest"/>
-          <include name="MyntraTest"/>
-          <include name="beforeTest"/>
-          <include name="FlipkartTest"/>
-          <include name="testDown"/>
-          <include name="beforeClass"/>
-          <include name="FacebookTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- Tests.ParallelTestingThreadLocal3 -->
-      <class name="Tests.ParallelTestingThreadLocal2">
-        <methods>
-          <include name="GoogleTest"/>
-          <include name="beforeSuite"/>
-          <include name="MyntraTest"/>
-          <include name="beforeTest"/>
-          <include name="FlipkartTest"/>
-          <include name="testDown"/>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-          <include name="FacebookTest"/>
-          <include name="tearDown"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- Tests.ParallelTestingThreadLocal2 -->
     </classes>
   </test> <!-- LoginTests1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

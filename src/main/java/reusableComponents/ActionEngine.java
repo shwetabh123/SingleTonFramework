@@ -19,10 +19,10 @@ import testBase.ExtentFactory;
 public class ActionEngine {
 
 	//Customized sendkeys method-> To log sendkeys message for every occ.
-	public void sendKeys_custom(WebElement element, String fieldName, String valueToBeSent) {
+	public  void sendKeys_custom(WebElement element, String fieldName, String valueToBeSent) {
 		try {
 			element.sendKeys(valueToBeSent);
-			//log success message in exgent report
+			//log success message in extent report
 			ExtentFactory.getInstance().getExtent().log(Status.PASS, fieldName+"==> Entered value as: "+valueToBeSent);
 		} catch (Exception e) {
 			//log failure in extent
@@ -32,10 +32,10 @@ public class ActionEngine {
 
 
 	//custom click method to log evey click action in to extent report
-	public void click_custom(WebElement element, String fieldName) {
+	public   void click_custom(WebElement element, String fieldName) {
 		try {
 			element.click();
-			//log success message in exgent report
+			//log success message in extent report
 			ExtentFactory.getInstance().getExtent().log(Status.PASS, fieldName+"==> Clicked Successfully! ");
 		} catch (Exception e) {
 			//log failure in extent
@@ -45,7 +45,7 @@ public class ActionEngine {
 
 
 	//clear data from field
-	public void clear_custom(WebElement element,String fieldName) {
+	public  void clear_custom(WebElement element,String fieldName) {
 		try {
 			element.clear();
 			Thread.sleep(250);
@@ -57,7 +57,7 @@ public class ActionEngine {
 	}
 
 	//custom mouseHover 
-	public void moveToElement_custom(WebElement element,String fieldName){
+	public  void moveToElement_custom(WebElement element,String fieldName){
 		try{
 			JavascriptExecutor executor = (JavascriptExecutor) DriverFactory.getInstance().getDriver();
 			
@@ -89,7 +89,7 @@ public class ActionEngine {
 
 
 	//Select dropdown value value by visibleText
-	public void selectDropDownByVisibleText_custom(WebElement element, String fieldName, String ddVisibleText) throws Throwable {
+	public  void selectDropDownByVisibleText_custom(WebElement element, String fieldName, String ddVisibleText) throws Throwable {
 		try {
 			Select s = new Select(element);
 			s.selectByVisibleText(ddVisibleText);
@@ -100,7 +100,7 @@ public class ActionEngine {
 	}
 
 	//Select dropdown value value by value
-	public void selectDropDownByValue_custom(WebElement element, String fieldName, String ddValue) throws Throwable {
+	public  void selectDropDownByValue_custom(WebElement element, String fieldName, String ddValue) throws Throwable {
 		try {
 			Select s = new Select(element);
 			s.selectByValue(ddValue);
@@ -111,7 +111,7 @@ public class ActionEngine {
 	}
 
 	//String Asserts
-	public void assertEqualsString_custom(String expvalue, String actualValue, String locatorName) throws Throwable {
+	public  void assertEqualsString_custom(String expvalue, String actualValue, String locatorName) throws Throwable {
 		try {
 			if(actualValue.equals(expvalue)) {
 				ExtentFactory.getInstance().getExtent().log(Status.PASS, "String Assertion is successful on field "+ locatorName + " Expected value was: "+ expvalue + " actual value is: "+actualValue);

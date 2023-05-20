@@ -11,28 +11,6 @@
 
 	</test> 
 
-	<test name="LoginTests2"  >
-		<classes>
-
-			<class name="Tests.ParallelTestingThreadLocal2" />
-		</classes>
-
-	</test> 
-
-	<test name="LoginTests3"  >
-		<classes>
-
-			<class name="Tests.ParallelTestingThreadLocal3" />
-		</classes>
-
-	</test> 
 	
-	<test name="LoginTests4"  >
-		<classes>
-
-			<class name="Tests.ParallelTestingThreadLocal4" />
-		</classes>
-
-	</test> 
 
 </suite>

@@ -6,6 +6,7 @@ package testBase;
 		private DriverFactory() {
 		}
 		private static DriverFactory instance  = new DriverFactory();
+		
 		public static DriverFactory getInstance() {
 			return instance;
 		}
